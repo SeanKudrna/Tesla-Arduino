@@ -1,22 +1,14 @@
 # Tesla-Arduino
 An autonomous vehicle created in conjunction with a partner during Fall 2022 of my senior year at UIC. Device equipped with the capability to manually control it via an application on your smartphone. This project utilizes two advanced subsystems to allow for the functionality desired, letting the user have full control of the vehicle.
  
-Names, NetIds, and Email addresses of all team members
+# Names and email addresses of all team members
 Rayaan Siddiqi
-NETID: rsiddi29
 Email: rsiddi29@uic.edu
 
 Sean Kudrna 
-NETID: skudr2
 Email: skudr2@uic.edu
 
-The title of your project
-The Tesla Arduino
-
-Abstract of your project (hard limit of 100 words or less)
-We are creating an autonomous vehicle with the capability to manually control it via an application on your smartphone. This project utilizes two advanced subsystems to allow for the functionality desired, letting the user full control of the vehicle. This project consists of two main systems, each having unique roles with the autonomous system controlling the car’s movement to ensure no obstacles are hit and the manual system allowing for the car’s movements to be dictated by the person controlling the application.
-
-Motivation
+# Motivation
 Our motivation for creating “The Tesla Arduino” was a combination of our group's interests in real life paired with what we believed was possible with the Arduino. At the beginning of the semester we both knew that we wanted to go out for something out of the box and create something which was applicable to real life. That led us to conclude our idea of creating an autonomous car but we decided to add a twist for some greater structure related to computer science. That led us to integrate the application we created to support a different functionality for the project and made the whole process worthwhile. 
 Overall description of the system..
 The main aspect of this system/project is to create an autonomous driving car using two arduino unos for computation, control, and obstacle avoidance. The car will be equipped with ultrasonic sensors which will aid in the avoidance functionality. By default, the car will move in a straight direction, and halt when it approaches an obstacle. 
@@ -25,7 +17,9 @@ The arduinos will be listening to the values provided by the ultrasonic sensor t
 
 As for the second aspect of the system, another arduino will be used to command the car, if specified by the user, manually using a mobile application that is connected via bluetooth. 
 Ideally, the car would also be equipped with a small camera that will stream video to the application for the user to view directly in front of the car, and a simple directional pad will be provided for movement control. From here, the autonomous driving code will be halted, and the user can take command of the vehicle and steer in any way they see fit.
-Description of each subsystem.
+
+
+#Description of each subsystem.
 Subsystem 1: Automated Control Unit (ACU)
 The ACU is responsible for all computations when it comes to vehicle movement and obstacle avoidance. 
 
@@ -36,63 +30,60 @@ The MOC acts as the contrary to the ACU subsystem.
 
 With this subsystem, the functionality of the hardware remains unchanged. The obstacle avoidance code is replaced by the networking involvements required for mobile app connection, and manual user input control for drive movement. In addition, the MOC has the additional output device of a camera, which streams video to the mobile application for user viewing and vehicle control.
 
-List of Input and Output devices per subsystem. 
+# List of Input and Output devices per subsystem. 
 
 SUBSYSTEM #1: AUTOMATED CONTROL UNIT
 
-
 Subsystem 1. Input devices.
-
 Device
-Behaviour
+-Ultrasonic Sensor
+
+Behavior
+-Used to measure distance for calculations in obstacle avoidance
+
 Input
-Ultrasonic Sensor
-Used to measure distance for calculations in obstacle avoidance
-Light/sound waves
-
-
+- Light/sound waves
 
 Subsystem 1. Output devices.
-
 Device
-Behaviour
+-Drive Motors
+-LED
+
+Behavior
+-Responsible for turning wheels
+-Responsible for illuminating when turning
+
 Output
-Drive Motors
-LED
-Responsible for turning wheels
-Responsible for illuminating when turning
-Turning movements 
+-Turning movements 
 
 SUBSYSTEM #2: MANUAL OVERRIDE CONTROL
 
-
-Subsystem 1. Input devices.
-
+Subsystem 2. Input devices.
 Device
-Behaviour
+-Application
+
+Behavior
+-Buttons and user inputs communicated via bluetooth for decision making when it comes to decision of vehicle
+
 Input
-Application
-Buttons and user inputs communicated via bluetooth for decision making when it comes to decision of vehicle
-App
-
-
+-App
 
 Subsystem 1. Output devices.
-
 Device
-Behaviour
+-Drive Motors
+-LED
+
+Behavior
+-Responsible for turning wheels
+-Responsible for illuminating when turning
+
 Output
-Drive Motors
-LED
-Responsible for turning wheels
-Responsible for illuminating when turning
-Turning movements 
+-Turning movements 
 
-
-
-Communication mechanism. 
+# Communication mechanism. 
 The main communication method between our application and the arduino will be via Bluetooth. The hardware will be communicated through with the information we send over from our app designating the moves and directions the vehicle will move towards. As for in-between the Arduinos, they will communicate through a serial communication and this communication will mainly entail details on the mode the vehicle is currently being driven on. This can be the autonomous mode or the manually controlled mode.
-Similar projects (State of the art)
+
+# Similar projects (State of the art)
 Mcnelly, Hannah. “Arduino Uno Autonomous Car.” Arduino Project Hub, 2017, 
 https://create.arduino.cc/projecthub/hannahmcneelyy/arduino-uno-autonomous-car-c45fd1. 
 This project is a base foundation for what we are going for. It is a watered down version of the autonomous vehicle which makes turns in response to the state of LED lights in front of it.
@@ -100,9 +91,11 @@ This project is a base foundation for what we are going for. It is a watered dow
 Sohail, Mohammad. “Android Mobile Controlled Bluetooth RC Car.” 
 Arduino Project Hub, 2021, https://create.arduino.cc/projecthub/mohammadsohail0008/android-mobile-controlled-bluetooth-rc-car-e77f77. 
 This project provides the base line for the manually controlled vehicle aspect of our project. It shows an application made to control the directions and movements of the vehicle.
-Statement of originality
+
+# Statement of originality
 Our project is original with the combination of the two subsystems we are implementing. While current iterations only utilize one subsystem, we are combining the idea of an autonomous vehicle with the aspect of it being manually controlled too in order to get the best of both worlds. This option to switch between automated and manual mode along with the ability to control the application with a mobile app and video output add layers of creativity and craftsmanship to our project.
-List of Materials
+
+# List of Materials
 - Ultrasonic Sensors
 - Arduino
 - Breadboard
@@ -111,14 +104,8 @@ List of Materials
 - Battery Charge Shield
 - Bluetooth Module
 - Wheel Motors
-Block Diagram of the system (Big picture diagram).
 
-Hardware diagrams 
-
-
-
-
-Steps to build your project 
+# Steps to build 
 1. Order all the parts required 
 - Ensure that all parts needed are here
 
@@ -139,7 +126,9 @@ Steps to build your project
 - Software
    -Create application using MIT App inventor
    -Connect device to car unit via Bluetooth
-User guide
+   
+   
+# User guide
 The user has two options when presented with our system which can be categorized below:
 1. Click the button on the app titled “Auto Pilot”
 - This will initiate the ACU subsystem which will start the autonomous driving mode for the car. 
@@ -148,10 +137,10 @@ The user has two options when presented with our system which can be categorized
 Video of the current prototype working 
 https://youtu.be/SnBGzoqBMXE
 
-
-Lessons Learned
+# Lessons Learned
 Throughout the creation of our final project, we learned many valuable lessons. If we had the opportunity to do it all again, we would stick to mostly the same of everything. We worked hard as a group together and got everything done in a timely manner. If we were to improve one thing it would be to improve the obstacle detection algorithm, however, it is currently still really good with detecting obstacles. We would like to make it even better to optimize the decisions it makes when detecting obstacles. We encountered problems as well such as those related to battery issues as the standard 5V battery included in our Arduino kit was not large enough to power the four motors of the vehicle. This led us to think of an intuitive solution: a battery bank. This ensured that our motors were properly powered. If we had more time and resources, we would like to improve the speed of our vehicle and this could be done through a better energy solution and weight reduction.
-Timeline
+
+# Timeline
 Week of Friday, November 4th
 Work on subsystem #1:
 Experiment with small version of app (start process)
@@ -185,7 +174,7 @@ Practice presentation and wrap up!
 Milestone 8 (12/2)
 Milestone 9 (12/5)
 
-References
+# References
 Build your own app that connects to Arduino/Genuino 101. Arduino Project Hub. (n.d.). Retrieved September 29, 2022, from https://create.arduino.cc/projecthub/inmyorbit/build-your-own-app-that-connects-to-arduino-genuino-101-e55dfe 
 
 “IOS and Arduino Serial Communication Using Blexar App and Bluetooth.” Maker Portal, makersportal.com/blexar-serial-communication. 
