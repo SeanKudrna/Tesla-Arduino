@@ -9,8 +9,9 @@ Sean Kudrna
 Email: skudr2@uic.edu
 
 # Motivation
-Our motivation for creating “The Tesla Arduino” was a combination of our group's interests in real life paired with what we believed was possible with the Arduino. At the beginning of the semester we both knew that we wanted to go out for something out of the box and create something which was applicable to real life. That led us to conclude our idea of creating an autonomous car but we decided to add a twist for some greater structure related to computer science. That led us to integrate the application we created to support a different functionality for the project and made the whole process worthwhile. 
-Overall description of the system..
+Our motivation for creating “The Tesla Arduino” was a combination of our group's interests in real life paired with what we believed was possible with the Arduino. At the beginning of the semester we both knew that we wanted to go out for something out of the box and create something which was applicable to real life. That led us to conclude our idea of creating an autonomous car but we decided to add a twist for some greater structure related to computer science. That led us to integrate the application we created to support a different functionality for the project and made the whole process worthwhile.
+
+# Overall description of the system
 The main aspect of this system/project is to create an autonomous driving car using two arduino unos for computation, control, and obstacle avoidance. The car will be equipped with ultrasonic sensors which will aid in the avoidance functionality. By default, the car will move in a straight direction, and halt when it approaches an obstacle. 
 
 The arduinos will be listening to the values provided by the ultrasonic sensor to know when the vehicle is in close proximity to a wall/obstacle. The car will then observe its surroundings, and pick the most efficient route to go depending on the furthest obstacle from it. For example, if the car is in a maze, when it reaches a wall it will look left, right, and then evaluate which direction allows it to move the most freely (which direction has a wall furthest away). Once it establishes the best direction to move in, the car will proceed in that trajectory.
@@ -19,7 +20,7 @@ As for the second aspect of the system, another arduino will be used to command 
 Ideally, the car would also be equipped with a small camera that will stream video to the application for the user to view directly in front of the car, and a simple directional pad will be provided for movement control. From here, the autonomous driving code will be halted, and the user can take command of the vehicle and steer in any way they see fit.
 
 
-#Description of each subsystem.
+# Description of each subsystem.
 Subsystem 1: Automated Control Unit (ACU)
 The ACU is responsible for all computations when it comes to vehicle movement and obstacle avoidance. 
 
