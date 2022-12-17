@@ -22,32 +22,32 @@ void loop(){
   Wire.write('5');   
   Wire.endTransmission();
       
-//  if(Serial.available() > 0){
-//    incomingValue = Serial.read();      
-//    if(incomingValue == '1'){ 
-//      Wire.beginTransmission(9); // transmit to device #9
-//      Wire.write('1');   
-//      Wire.endTransmission();
-//    } else if (incomingValue == '2') {
-//      Wire.beginTransmission(9); // transmit to device #9
-//      Wire.write('2');   
-//      Wire.endTransmission();
-//    } else if (incomingValue == '3') {
-//      Wire.beginTransmission(9); // transmit to device #9
-//      Wire.write('3');   
-//      Wire.endTransmission();
-//    } else if (incomingValue == '4') {
-//      Wire.beginTransmission(9); // transmit to device #9
-//      Wire.write('4');   
-//      Wire.endTransmission();
-//    } else if (incomingValue == '5') {
-//      Wire.beginTransmission(9); // transmit to device #9
-//      Wire.write('5');   
-//      Wire.endTransmission();
-//    } else if (incomingValue == '6') {
-//      Wire.beginTransmission(9); // transmit to device #9
-//      Wire.write('6');   
-//      Wire.endTransmission();
-//    }
-//  }                            
+  if(Serial.available() > 0){
+    incomingValue = Serial.read();      
+    if(incomingValue == '1'){ 
+      Wire.beginTransmission(9); // transmit to device #9
+      Wire.write('1');   
+      Wire.endTransmission();
+    } else if (incomingValue == '2') {
+      Wire.beginTransmission(9); // transmit to device #9
+      Wire.write('2');   
+      Wire.endTransmission();
+    } else if (incomingValue == '3') {
+      Wire.beginTransmission(9); // transmit to device #9
+      Wire.write('3');   
+      Wire.endTransmission();
+    } else if (incomingValue == '4') {
+      Wire.beginTransmission(9); // transmit to device #9
+      Wire.write('4');   
+      Wire.endTransmission();
+    } else if (incomingValue == '5') {
+      Wire.beginTransmission(9); // transmit to device #9
+      Wire.write('5');   
+      Wire.endTransmission();
+    } else if (incomingValue == '6') {
+      Wire.beginTransmission(9); // transmit to device #9
+      Wire.write('6');   
+      Wire.endTransmission();
+    }
+  }                            
 } 
