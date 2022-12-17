@@ -36,50 +36,26 @@ With this subsystem, the functionality of the hardware remains unchanged. The ob
 SUBSYSTEM #1: AUTOMATED CONTROL UNIT
 
 Subsystem 1. Input devices.
-Device
--Ultrasonic Sensor
 
-Behavior
--Used to measure distance for calculations in obstacle avoidance
+-(Device): Ultrasonic Sensor, (Behavior): Used to measure distance for calculations in obstacle avoidance, (Input): Light/sound waves
 
-Input
-- Light/sound waves
 
 Subsystem 1. Output devices.
-Device
--Drive Motors
--LED
 
-Behavior
--Responsible for turning wheels
--Responsible for illuminating when turning
+-(Device): Drive Motors, Led, (Behavior): Responsible for turning wheels, responsible for illuminating when turning, (Output): Turning movements 
 
-Output
--Turning movements 
 
 SUBSYSTEM #2: MANUAL OVERRIDE CONTROL
 
 Subsystem 2. Input devices.
-Device
--Application
 
-Behavior
--Buttons and user inputs communicated via bluetooth for decision making when it comes to decision of vehicle
+-(Device): Application, (Behavior): Buttons and user inputs communicated via bluetooth for decision making when it comes to decision of vehicle, (Input): App
 
-Input
--App
 
-Subsystem 1. Output devices.
-Device
--Drive Motors
--LED
+Subsystem 2. Output devices.
 
-Behavior
--Responsible for turning wheels
--Responsible for illuminating when turning
+-(Device): Drive Motors, LED, (Behavior): Responsible for turning wheels, responsible for illuminating when turning, (Output): Turning movements 
 
-Output
--Turning movements 
 
 # Communication mechanism. 
 The main communication method between our application and the arduino will be via Bluetooth. The hardware will be communicated through with the information we send over from our app designating the moves and directions the vehicle will move towards. As for in-between the Arduinos, they will communicate through a serial communication and this communication will mainly entail details on the mode the vehicle is currently being driven on. This can be the autonomous mode or the manually controlled mode.
